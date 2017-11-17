@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { injectGlobal } from 'styled-components';
+import { injectGlobal, ThemeProvider } from 'styled-components';
 
 injectGlobal`
 body {
@@ -14,5 +14,9 @@ body {
 }
 `;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const theme = {
+    primary: 'tomato'
+};
+
+ReactDOM.render(<ThemeProvider theme={theme}><App /></ThemeProvider>, document.getElementById('root'));
 registerServiceWorker();
