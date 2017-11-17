@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import './App.css';
+import styled, { injectGlobal } from 'styled-components';
+// import './App.css';
 
 const contacts = [
   { name: 'Lucy', gender: 'male', age: 30, introduction: 'Developer' },
